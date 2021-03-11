@@ -1,4 +1,13 @@
 <?php 
+/*
+Ririn Syafira Kirana
+203040064
+https://github.com/RirinSyafira/pw2021_203040064
+Pertemuan 5 (12 Maret 2021)
+Mempelajari Array PHP
+Latihan 2
+*/
+
 // Pengulangan pada array
 // for / foreach
 $angka = [3,2,15,20,11,97,92,45];

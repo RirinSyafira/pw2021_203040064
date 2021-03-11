@@ -1,4 +1,13 @@
 <?php
+/*
+Ririn Syafira Kirana
+203040064
+https://github.com/RirinSyafira/pw2021_203040064
+Pertemuan 5 (12 Maret 2021)
+Mempelajari Array PHP
+Latihan 3
+*/
+
 $mahasiswa = [
     ["Ririn Syafira", "203040064", "Teknik Informatika", "ririnsyafirak@gmail.com"],
     ["Siti Komalasari", "203040068", "Teknik Informatika", "sitimala@gmail.com"],
@@ -16,7 +25,7 @@ $mahasiswa = [
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
-    
+
     <?php foreach($mahasiswa as $mhs) : ?>
     <ul>
         <!-- <li>Ririn Syafira</li>
