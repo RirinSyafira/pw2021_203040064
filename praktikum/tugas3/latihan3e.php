@@ -1,0 +1,1 @@
+Item, artist, kategori, harga, status
