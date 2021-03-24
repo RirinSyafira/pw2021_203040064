@@ -112,7 +112,7 @@ $items = [
             <tbody>
                 <?php foreach($items as $no => $itm) : ?>
                     <tr>
-                        <td><?= $no+1; ?></td>
+                        <td><?= $id = 1; ?></td>
                         <td><img src="img/<?= $itm["photo"]; ?>"></td>
                         <td><b><?= $itm["item"]; ?></td>
                         <td><?= $itm["details"]; ?></td>
@@ -120,7 +120,7 @@ $items = [
                         <td><?= $itm["category"]; ?></td>
                         <td><?= $itm["status"]; ?></td>
                     </tr>
-                   
+                <?php $id++; ?>
                 <?php endforeach; ?>
             </tbody>
         </table>
