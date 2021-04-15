@@ -1,0 +1,6 @@
+body {
+    background-color: #b2dfdb;
+}
+.btn:hover {
+    background-color: white !important;
+}
