@@ -10,21 +10,14 @@ require 'functions.php';
 $items = query("SELECT * FROM shoes");
 
 // Pencarian
-if(isset($_GET['search'])) {
-    $keyword = $_GET['keyword'];
-    $shoes = query("SELECT * FROM shoes WHERE
-                name LIKE '%$keyword%' OR
-                details LIKE '%$keyword%' OR
-                price LIKE '%$keyword%' OR
-                color LIKE '%$keyword%' OR
-                category LIKE '%$keyword%' ");
-} else {
-    $shoes = query("SELECT * FROM shoes");
+if (isset($_GET['search'])) {
+    $items = search($_GET['keyword']);
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +25,7 @@ if(isset($_GET['search'])) {
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Tubes PW</title>
@@ -44,7 +37,7 @@ if(isset($_GET['search'])) {
             <a href="tambah.php" class="waves-effect waves-light btn pink lighten-1">Add Data</a>
         </div>
         <form action="" method="get">
-            <input type="text" name="keyword" autofocus>
+            <input type="text" name="keyword" autofocus autocomplete="off" autofocus>
             <button type="submit" name="search" class="waves-effect waves-light btn pink lighten-1">Search</button>
         </form>
         <table class="highlight">
@@ -62,36 +55,39 @@ if(isset($_GET['search'])) {
                 </tr>
             </thead>
             <tbody>
-            <?php if (empty($items)) : ?>
-                <tr>
-                    <td colspan="7"><h1>Data tidak ditemukan.</h1></td>
-                </tr>
-            <?php else : ?>
-                <?php $i = 1; ?>
-                <?php foreach ($items as $item) : ?>
+                <?php if (empty($items)) : ?>
                     <tr>
-                        <td><?= $i;?></td>
-                        <td>
-                            <a href="edit.php?id=<?= $item['id']?>" class="waves-effect waves-light btn">Edit</a>
-                            <a href="delete.php?id=<?= $item['id']?>" onclick="return confirm('Delete data?')" class="waves-effect waves-light btn">Delete</a>
-                        </td>
-                        <td><img src="..assets/img/<?= $item["img"]; ?>"></td>
-                        <td><b><?= $item["name"]; ?></td>
-                        <td><?= $item["details"]; ?></td>
-                        <td><?= $item["price"]; ?></td>
-                        <td><?= $item["color"]; ?></td>
-                        <td><?= $item["category"]; ?></td>
-                        <td>
-                            <a href="..php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"]?>>View Product</a>
+                        <td colspan="7">
+                            <h3>The requested data was not found.</h3>
                         </td>
                     </tr>
-                    <?php $i++; ?>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                <?php else : ?>
+                    <?php $i = 1; ?>
+                    <?php foreach ($items as $item) : ?>
+                        <tr>
+                            <td><?= $i; ?></td>
+                            <td>
+                                <a href="edit.php?id=<?= $item['id'] ?>" class="waves-effect waves-light btn">Edit</a>
+                                <a href="delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Delete data?')" class="waves-effect waves-light btn">Delete</a>
+                            </td>
+                            <td><img src="..assets/img/<?= $item["img"]; ?>"></td>
+                            <td><b><?= $item["name"]; ?></td>
+                            <td><?= $item["details"]; ?></td>
+                            <td><?= $item["price"]; ?></td>
+                            <td><?= $item["color"]; ?></td>
+                            <td><?= $item["category"]; ?></td>
+                            <td>
+                                <a href="..php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"] ?>>View Product</a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </tbody>
         </table>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
+
 </html>

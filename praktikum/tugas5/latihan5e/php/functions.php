@@ -4,7 +4,8 @@
 // Jumat 10.00 - 11.00
 
 // Fungsi untuk melakukan koneksi ke database
-function koneksi() {
+function koneksi()
+{
     $connect = mysqli_connect("localhost", "root", "");
     mysqli_select_db($connect, "pw_tubes_203040064");
 
@@ -12,7 +13,8 @@ function koneksi() {
 }
 
 // Fungsi untuk melakukan query dan memasukannya kedalam array
-function query($sql) {
+function query($sql)
+{
     $connect = koneksi();
     $result = mysqli_query($connect, "$sql");
     $items = [];
@@ -23,7 +25,8 @@ function query($sql) {
 }
 
 // Fungsi untuk menambahkan data didalam database
-function add($data) {
+function add($data)
+{
     $connect = koneksi();
 
     $img = htmlspecialchars($data['img']);
@@ -36,14 +39,15 @@ function add($data) {
     $query = "INSERT INTO shoes
                     VALUES
                     ('', '$img', '$name', '$details', '$price', '$color', '$category')";
-    
+
     mysqli_query($connect, $query);
 
     return mysqli_affected_rows($connect);
 }
 
 // Fungsi untuk menghapus data
-function delete($id) {
+function delete($id)
+{
     $connect = koneksi();
     mysqli_query($connect, "DELETE FROM shoes WHERE id = $id");
 
@@ -51,7 +55,8 @@ function delete($id) {
 }
 
 // Fungsi untuk mengubah data
-function edit($data) {
+function edit($data)
+{
     $connect = koneksi();
     $id = $data['id'];
     $img = htmlspecialchars($data['img']);
@@ -63,17 +68,30 @@ function edit($data) {
 
     $query = "UPDATE shoes
             SET 
-            'img' = '$img',
-            'name' = '$name',
-            'details' = '$details',
-            'price' = '$price',
-            'color' = '$color',
-            'category' = '$category',
-            WHERE 'id' = '$id'
-            ";
-    
-    mysqli_query($connect, $query);
+            img = '$img',
+            name = '$name',
+            details = '$details',
+            price = '$price',
+            color = '$color',
+            category = '$category'
+            WHERE id = $id ";
+
+    mysqli_query($connect, $query) or die(mysqli_error($connect));
 
     return mysqli_affected_rows($connect);
 }
-?>
+
+function search($keyword)
+{
+    $connect = koneksi();
+
+    $query = "SELECT * FROM shoes 
+            WHERE
+            name LIKE '%$keyword%' OR
+            details LIKE '%$keyword%' OR
+            price LIKE '%$keyword%' OR
+            color LIKE '%$keyword%' OR
+            category LIKE '%$keyword%' ";
+
+    return query($query);
+}
