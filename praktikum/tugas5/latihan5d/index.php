@@ -11,6 +11,7 @@ $items = query("SELECT * FROM shoes");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +19,11 @@ $items = query("SELECT * FROM shoes");
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="../css/style.css">
     <title>Tubes PW</title>
 </head>
+
 <body>
     <div class="container">
         <table class="highlight">
@@ -47,7 +49,7 @@ $items = query("SELECT * FROM shoes");
                         <td><?= $item["color"]; ?></td>
                         <td><?= $item["category"]; ?></td>
                         <td>
-                            <a href="php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"]?>>View Product</a>
+                            <a href="php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"] ?>>View Product</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -55,4 +57,5 @@ $items = query("SELECT * FROM shoes");
         </table>
     </div>
 </body>
+
 </html>

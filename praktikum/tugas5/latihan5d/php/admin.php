@@ -12,6 +12,7 @@ $items = query("SELECT * FROM shoes");
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@ $items = query("SELECT * FROM shoes");
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Tubes PW</title>
@@ -32,7 +33,7 @@ $items = query("SELECT * FROM shoes");
         </div>
         <table class="highlight">
             <thead>
-            <tr>
+                <tr>
                     <th>No.</th>
                     <th>Opsi</th>
                     <th>Image</th>
@@ -49,8 +50,8 @@ $items = query("SELECT * FROM shoes");
                     <tr>
                         <td><?= $item["id"]; ?></td>
                         <td>
-                            <a href="edit.php?id=<?= $item['id']?>" class="waves-effect waves-light btn">Edit</a>
-                            <a href="delete.php?id=<?= $item['id']?>" onclick="return confirm('Delete data?')" class="waves-effect waves-light btn">Delete</a>
+                            <a href="edit.php?id=<?= $item['id'] ?>" class="waves-effect waves-light btn">Edit</a>
+                            <a href="delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Delete data?')" class="waves-effect waves-light btn">Delete</a>
                         </td>
                         <td><img src="..assets/img/<?= $item["img"]; ?>"></td>
                         <td><b><?= $item["name"]; ?></td>
@@ -59,7 +60,7 @@ $items = query("SELECT * FROM shoes");
                         <td><?= $item["color"]; ?></td>
                         <td><?= $item["category"]; ?></td>
                         <td>
-                            <a href="..php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"]?>>View Product</a>
+                            <a href="..php/detail.php?id=<?= $item['id'] ?>" <?= $item["name"] ?>>View Product</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -69,4 +70,5 @@ $items = query("SELECT * FROM shoes");
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
+
 </html>
