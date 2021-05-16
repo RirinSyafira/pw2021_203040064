@@ -61,15 +61,6 @@ if (isset($_POST['login'])) {
             <input id="password" name="password" type="password" class="validate" required>
             <label for="password">Password</label>
           </div>
-          <div class="remember" style="margin-left: 15px;">
-            <p>
-              <label>
-                <label for="remember"></label>
-                <input type="checkbox" name="remember" />
-                <span>Remember me</span>
-              </label>
-            </p>
-          </div>
           <br>
           <button type="submit" name="login" class="waves-effect waves-light btn">Login</button>
           <br>
