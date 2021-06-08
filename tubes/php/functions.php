@@ -59,7 +59,7 @@ function delete($id)
 function edit($data)
 {
     $connect = koneksi();
-    $id = $data['id'];
+    $id = htmlspecialchars($data['id']);
     $img = htmlspecialchars($data['img']);
     $name = htmlspecialchars($data['name']);
     $details = htmlspecialchars($data['details']);
@@ -69,13 +69,13 @@ function edit($data)
 
     $query = "UPDATE shoes
             SET 
-            img = '$img',
-            name = '$name',
-            details = '$details',
-            price = '$price',
-            color = '$color',
-            category = '$category'
-            WHERE id = $id ";
+            'img' = '$img',
+            'name' = '$name',
+            'details' = '$details',
+            'price' = '$price',
+            'color' = '$color',
+            'category' = '$category'
+            WHERE 'id' = $id ";
 
     mysqli_query($connect, $query) or die(mysqli_error($connect));
 
@@ -118,7 +118,7 @@ function registrasi($data)
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     // Tambah User baru
-    $query_tambah = "INSERT INTO user VALUES('', '$username', '$password')";
+    $query_tambah = "INSERT INTO user VALUES(NULL, '$username', '$password')";
     mysqli_query($connect, $query_tambah);
 
     return mysqli_affected_rows($connect);
