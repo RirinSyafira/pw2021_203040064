@@ -107,7 +107,7 @@ function registrasi($data)
 
     // Cek ada tidaknya username
     $result = mysqli_query($connect, "SELECT username FROM user WHERE username = '$username'");
-    if (mysqli_fetch_all($result)) {
+    if (mysqli_fetch_assoc($result)) {
         echo "<script>
                 alert('Username sudah digunakan');
             </script>";
@@ -118,7 +118,7 @@ function registrasi($data)
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     // Tambah User baru
-    $query_tambah = "INSERT INTO user VALUES('', '$username', '$password')";
+    $query_tambah = "INSERT INTO user VALUES(NULL, '$username', '$password')";
     mysqli_query($connect, $query_tambah) or die(mysqli_error($connect));
 
     return mysqli_affected_rows($connect);
