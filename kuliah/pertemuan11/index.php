@@ -7,8 +7,6 @@ Pertemuan 11 (07 Mei 2021)
 Mempelajari Delete dan Update Data
 Halaman Index
 */
-?>
-<?php
 
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");

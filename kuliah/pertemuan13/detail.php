@@ -7,9 +7,6 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Halaman Detail Mahasiswa
 */
-?>
-
-<?php
 
 session_start();
 

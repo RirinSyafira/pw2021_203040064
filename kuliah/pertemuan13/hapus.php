@@ -7,9 +7,6 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Halaman Hapus
 */
-?>
-
-<?php
 
 session_start();
 
@@ -40,5 +37,3 @@ if (hapus($id) > 0) {
                     document.location.href = 'index.php';
                 </script>";
 }
-
-?>

@@ -7,8 +7,6 @@ Pertemuan 11 (07 Mei 2021)
 Mempelajari Delete dan Update Data
 Functions
 */
-?>
-<?php
 
 function koneksi()
 {
@@ -104,5 +102,3 @@ function cari($keyword)
 
   return $rows;
 }
-
-?>

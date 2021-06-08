@@ -7,8 +7,6 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Functions
 */
-?>
-<?php
 
 function koneksi()
 {
@@ -186,4 +184,3 @@ function registrasi($data)
   mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }
-?>

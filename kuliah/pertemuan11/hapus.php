@@ -7,9 +7,7 @@ Pertemuan 11 (07 Mei 2021)
 Mempelajari Delete dan Update Data
 Halaman Hapus
 */
-?>
 
-<?php
 require 'functions.php';
 
 // jika tidak ada id di url
@@ -32,5 +30,3 @@ if (hapus($id) > 0) {
                     document.location.href = 'index.php';
                 </script>";
 }
-
-?>

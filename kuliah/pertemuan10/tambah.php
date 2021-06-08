@@ -7,8 +7,7 @@ Pertemuan 10 (30 Maret 2021)
 Mempelajari Koneksi DB - Insert Data
 Form Tambah Data
 */
-?>
-<?php
+
 require 'functions.php';
 
 // cek tombol tambah sudah ditekan

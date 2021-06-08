@@ -7,9 +7,7 @@ Pertemuan 10 (21 Maret 2021)
 Mempelajari Koneksi DB
 Halaman Detail Mahasiswa
 */
-?>
 
-<?php
 require 'functions.php';
 
 // Ambil id dari URL

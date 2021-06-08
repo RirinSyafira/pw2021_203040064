@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Ririn Syafira Kirana
 203040064
@@ -24,10 +24,12 @@ Latihan 1
 
 // // Menampilkan satu elemen pada array
 // echo $arr[0];
-// ?>
+// 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,30 +46,34 @@ Latihan 1
             float: left;
             transition: 0.5s;
         }
+
         .kotak:hover {
             transform: rotate(360deg);
             border-radius: 50%;
         }
+
         .clear {
             clear: both;
         }
     </style>
 </head>
+
 <body>
 
-    <?php 
-        $angka = [
-            [1,2,3],
-            [4,5,6],
-            [7,8,9]
-        ];
+    <?php
+    $angka = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
     ?>
-    <?php foreach($angka as $a) : ?>
-        <?php foreach($a as $b) : ?>
+    <?php foreach ($angka as $a) : ?>
+        <?php foreach ($a as $b) : ?>
             <div class="kotak"><?= $b; ?></div>
         <?php endforeach ?>
         <div class="clear"></div>
     <?php endforeach; ?>
-    
+
 </body>
+
 </html>

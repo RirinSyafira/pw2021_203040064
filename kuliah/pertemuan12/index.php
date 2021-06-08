@@ -7,8 +7,6 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Halaman Index
 */
-?>
-<?php
 
 session_start();
 
@@ -26,8 +24,6 @@ if (isset($_POST['cari'])) {
 }
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">

@@ -7,8 +7,7 @@ Pertemuan 11 (07 Mei 2021)
 Mempelajari Delete dan Update Data
 Form Ubah Data
 */
-?>
-<?php
+
 require 'functions.php';
 
 // jika tidak ada id di url

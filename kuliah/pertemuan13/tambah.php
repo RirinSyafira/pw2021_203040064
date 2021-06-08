@@ -7,8 +7,6 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Form Tambah Data
 */
-?>
-<?php
 
 session_start();
 

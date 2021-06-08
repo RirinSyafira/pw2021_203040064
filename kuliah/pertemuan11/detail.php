@@ -7,9 +7,7 @@ Pertemuan 11 (07 Mei 2021)
 Mempelajari Delete dan Update Data
 Halaman Detail Mahasiswa
 */
-?>
 
-<?php
 require 'functions.php';
 
 // Ambil id dari URL

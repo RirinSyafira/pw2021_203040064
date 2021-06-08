@@ -7,12 +7,10 @@ Pertemuan 12 (14 Mei 2021)
 Mempelajari Login dan Registrasi
 Functions
 */
-?>
-<?php
 
 function koneksi()
 {
-  return mysqli_connect('localhost', 'root', '', 'pw_203040064');
+  return mysqli_connect('localhost', 'pw20064', '#Akun#203040064#', 'pw20064_pw_203040064');
 }
 
 function query($query)
@@ -265,4 +263,3 @@ function registrasi($data)
   mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }
-?>

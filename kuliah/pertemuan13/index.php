@@ -7,8 +7,6 @@ Pertemuan 13 (20 Mei 2021)
 Mempelajari AJAX Live Search dan Upload Gambar
 Halaman Index
 */
-?>
-<?php
 
 session_start();
 

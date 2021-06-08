@@ -7,8 +7,8 @@ Pertemuan 6 (12 Maret 2021)
 Mempelajari Associative Array PHP
 Latihan 3 - Membuat data menggunakan associative array
 */
-?>
-<?php 
+
+
 $novel = [
     [
         "judul" => "Hujan",
@@ -84,17 +84,19 @@ $novel = [
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Novel</title>
 </head>
+
 <body>
     <h1>Daftar Novel</h1>
     <?php foreach ($novel as $nvl) : ?>
         <ul>
-            <li><img src="img/<?= $nvl["cover"]?>"></li>
+            <li><img src="img/<?= $nvl["cover"] ?>"></li>
             <li>Judul : <?= $nvl["judul"]; ?></li>
             <li>Penulis : <?= $nvl["penulis"]; ?></li>
             <li>Penerbit : <?= $nvl["penerbit"]; ?></li>
@@ -102,4 +104,5 @@ $novel = [
         </ul>
     <?php endforeach; ?>
 </body>
+
 </html>

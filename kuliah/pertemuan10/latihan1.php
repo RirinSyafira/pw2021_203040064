@@ -7,8 +7,7 @@ Pertemuan 10 (21 Maret 2021)
 Mempelajari Koneksi DB
 Latihan 1
 */
-?>
-<?php
+
 // Koneksi ke DB dan Pilih Database
 $conn = mysqli_connect('localhost', 'root', '', 'pw_203040064');
 
@@ -26,10 +25,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // Tampung ke variabel mahasiswa
 $mahasiswa = $rows;
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">

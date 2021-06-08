@@ -7,8 +7,6 @@ Pertemuan 10 (21 Maret 2021)
 Mempelajari Koneksi DB
 Latihan 3
 */
-?>
-<?php
 
 function koneksi()
 {
@@ -53,4 +51,3 @@ function tambah($data)
   echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }
-?>

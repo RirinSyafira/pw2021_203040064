@@ -7,15 +7,11 @@ Pertemuan 10 (21 Maret 2021)
 Mempelajari Koneksi DB
 Latihan 2
 */
-?>
-<?php
 
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
