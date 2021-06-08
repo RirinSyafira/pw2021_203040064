@@ -4,10 +4,10 @@
 // Jumat 10.00 - 11.00
 
 // Connect ke database
-$connect = mysqli_connect("localhost", "root", "");
+$connect = mysqli_connect("localhost", "pw20064", "#Akun#203040064#");
 
 // Memiih database yang digunakan
-mysqli_select_db($connect, "pw_tubes_203040064");
+mysqli_select_db($connect, "pw20064_tubes_203040064");
 
 // Mengambil data dari database (query)
 $result = mysqli_query($connect, "SELECT * FROM shoes");
@@ -18,6 +18,7 @@ if (!$result) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,10 +26,11 @@ if (!$result) {
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="..css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="..css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Tubes PW</title>
 </head>
+
 <body>
     <div class="container">
         <table class="highlight">
@@ -44,9 +46,9 @@ if (!$result) {
                 </tr>
             </thead>
             <tbody>
-                <?php while($items = mysqli_fetch_assoc($result)) : ?>
+                <?php while ($items = mysqli_fetch_assoc($result)) : ?>
                     <tr>
-                    <td><?= $items["id"]; ?></td>
+                        <td><?= $items["id"]; ?></td>
                         <td><img src="assets/img/<?= $items["img"]; ?>"></td>
                         <td><b><?= $items["name"]; ?></td>
                         <td><?= $items["details"]; ?></td>
@@ -59,4 +61,5 @@ if (!$result) {
         </table>
     </div>
 </body>
+
 </html>
