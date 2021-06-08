@@ -41,7 +41,7 @@ function add($data)
                     VALUES
                     ('', '$img', '$name', '$details', '$price', '$color', '$category')";
 
-    mysqli_query($connect, $query);
+    mysqli_query($connect, $query) or die(mysqli_error($connect));
 
     return mysqli_affected_rows($connect);
 }
