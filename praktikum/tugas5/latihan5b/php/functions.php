@@ -5,8 +5,8 @@
 
 // Fungsi untuk melakukan koneksi ke database
 function koneksi() {
-    $connect = mysqli_connect("localhost", "root", "");
-    mysqli_select_db($connect, "pw_tubes_203040064");
+    $connect = mysqli_connect("localhost", "pw20064", "#Akun#203040064#") or die("koneksi ke DB gagal");
+    mysqli_select_db($connect, "pw20064_tubes_203040064") or die("Database salah!");
 
     return $connect;
 }
@@ -41,4 +41,3 @@ function add($data) {
 
     return mysqli_affected_rows($connect);
 }
-?>
