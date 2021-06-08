@@ -39,7 +39,7 @@ function add($data)
 
     $query = "INSERT INTO shoes
                     VALUES
-                    ('', '$img', '$name', '$details', '$price', '$color', '$category')";
+                    (NULL, '$img', '$name', '$details', '$price', '$color', '$category')";
 
     mysqli_query($connect, $query) or die(mysqli_error($connect));
 
