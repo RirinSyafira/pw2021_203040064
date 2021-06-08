@@ -69,13 +69,13 @@ function edit($data)
 
     $query = "UPDATE shoes
             SET 
-            'img' = '$img',
-            'name' = '$name',
-            'details' = '$details',
-            'price' = '$price',
-            'color' = '$color',
-            'category' = '$category'
-            WHERE 'id' = $id ";
+            img = '$img',
+            name = '$name',
+            details = '$details',
+            price = '$price',
+            color = '$color',
+            category = '$category'
+            WHERE id = $id ";
 
     mysqli_query($connect, $query) or die(mysqli_error($connect));
 
